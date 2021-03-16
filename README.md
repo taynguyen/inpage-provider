@@ -8,12 +8,12 @@ Implements the Ethereum JavaScript provider specification, [EIP-1193](https://ei
 
 ## Installation
 
-`yarn add @metamask/inpage-provider`
+`yarn add @taynguyen/inpage-provider`
 
 ## Usage
 
 ```javascript
-import { initializeProvider } from '@metamask/inpage-provider'
+import { initializeProvider } from '@taynguyen/inpage-provider'
 
 // Create a stream to a remote provider:
 const metamaskStream = new LocalMessageDuplexStream({
