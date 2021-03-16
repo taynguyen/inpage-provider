@@ -61,7 +61,7 @@ describe('MetaMaskInpageProvider: Miscellanea', () => {
 
       expect(
         () => new MetaMaskInpageProvider(stream, null),
-      ).toThrow(`Cannot read property 'jsonRpcStreamName' of null`);  // Quick fix for old: .toThrow('Cannot destructure property `jsonRpcStreamName` of \'undefined\' or \'null\'');
+      ).toThrow(`Cannot read property 'jsonRpcStreamName' of null`); // Quick fix for old: .toThrow('Cannot destructure property `jsonRpcStreamName` of \'undefined\' or \'null\'');
 
       expect(
         () => new MetaMaskInpageProvider(stream, {
