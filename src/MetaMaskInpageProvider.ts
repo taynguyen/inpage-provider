@@ -124,7 +124,7 @@ export default class MetaMaskInpageProvider extends SafeEventEmitter {
   /**
    * Indicating that this provider is a MetaMask provider.
    */
-  public readonly isMetaMask: true;
+  public readonly isMetaMask: false;
 
   /**
    * Experimental methods can be found here.
@@ -169,7 +169,7 @@ export default class MetaMaskInpageProvider extends SafeEventEmitter {
     super();
 
     this._log = logger;
-    this.isMetaMask = true;
+    this.isMetaMask = false;
 
     this.setMaxListeners(maxEventListeners);
 

@@ -69,11 +69,15 @@ export function initializeProvider({
 
 /**
  * Sets the given provider instance as window.ethereum and dispatches the
- * 'ethereum#initialized' event on window.
+ * 'attrace_wallet#initialized' event on window.
  *
  * @param providerInstance - The provider instance.
  */
 export function setGlobalProvider(providerInstance: MetaMaskInpageProvider): void {
-  (window as Record<string, any>).ethereum = providerInstance;
-  window.dispatchEvent(new Event('ethereum#initialized'));
+  let windowObj = (window as Record<string, any>);
+  if (!windowObj.attrace_wallet) {
+    windowObj.attrace_wallet = providerInstance;
+  }
+  
+  window.dispatchEvent(new Event('attrace_wallet#initialized'));
 }
